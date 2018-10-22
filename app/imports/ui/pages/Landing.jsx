@@ -1,22 +1,33 @@
 import React from 'react';
-import { Grid, Image } from 'semantic-ui-react';
+import { Grid, Icon, Header } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
   render() {
     return (
-        <Grid verticalAlign='middle' textAlign='center' container>
+        <div className='landing-background'>
+          <Grid container stackable centered columns={3}>
 
-          <Grid.Column width={4}>
-            <Image size='small' circular src="/images/meteor-logo.png"/>
-          </Grid.Column>
+            <Grid.Column textAlign='center'>
+              <Icon size='huge' name='users' inverted/>
+              <Header as='h1' inverted>Multiple Users</Header>
+              <Header as='h3' inverted>Connect with other users in this site.</Header>
+            </Grid.Column>
 
-          <Grid.Column width={8}>
-            <h1>Welcome to this template</h1>
-            <p>Now get to work and modify this app!</p>
-          </Grid.Column>
+            <Grid.Column textAlign='center'>
+              <Icon size='huge' name='file text' inverted/>
+              <Header as='h1' inverted>Contact Details</Header>
+              <Header as='h3' inverted>Exchange contact information with these users.</Header>
+            </Grid.Column>
 
-        </Grid>
+            <Grid.Column textAlign='center'>
+              <Icon size='huge' name='checked calender' inverted/>
+              <Header as='h1' inverted>Timestamped Notes</Header>
+              <Header as='h3' inverted>Mark your calender on when and where you will meet your contact</Header>
+            </Grid.Column>
+
+          </Grid>
+        </div>
     );
   }
 }

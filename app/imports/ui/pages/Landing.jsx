@@ -21,7 +21,7 @@ class Landing extends React.Component {
             </Grid.Column>
 
             <Grid.Column textAlign='center'>
-              <Icon size='huge' name='checked calender' inverted/>
+              <Icon size='huge' name='checked calendar' inverted/>
               <Header as='h1' inverted>Timestamped Notes</Header>
               <Header as='h3' inverted>Mark your calender on when and where you will meet your contact</Header>
             </Grid.Column>

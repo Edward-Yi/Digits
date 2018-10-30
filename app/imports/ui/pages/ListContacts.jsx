@@ -34,7 +34,7 @@ ListContacts.propTypes = {
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe('Contact');
+  const subscription = Meteor.subscribe('Contacts');
   return {
     contacts: Contacts.find({}).fetch(),
     ready: subscription.ready(),

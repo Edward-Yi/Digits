@@ -9,7 +9,7 @@
 
 <p>Run the app with: <strong>meteor npm run start</strong></p>
 
-<p><strong>Regarding the bcrypt warning:</strong> installing bcrypt is more difficult than it is shown. And, it is safe to ignore this warning in the initial stages of development.</p>
+<p><strong>Regarding the bcrypt warning:</strong> installing bcrypt is more difficult than the prompt shows. And, it is safe to ignore this warning in the initial stages of development.</p>
 
 <h2>Pages Walkthrough</h2>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image, Feed, Button } from 'semantic-ui-react';
+import { Card, Image, Feed, Button, Confirm } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 import { Bert } from 'meteor/themeteorchef:bert';
@@ -9,6 +9,10 @@ import { Contacts } from '../../api/contact/contact';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Contact extends React.Component {
+  state = { open: false }
+  open = () => this.setState({ open: true })
+  close = () => this.setState({ open: false })
+
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
@@ -16,6 +20,7 @@ class Contact extends React.Component {
 
   onClick() {
     Contacts.remove(this.props.contact._id, this.deleteCallback);
+    return this.close;
   }
 
   deleteCallback(error) {
@@ -49,7 +54,8 @@ class Contact extends React.Component {
             <AddNote owner={this.props.contact.owner} contactId={this.props.contact._id}/>
           </Card.Content>
           <Card.Content extra>
-            <Button onClick={this.onClick}>Delete</Button>
+            <Button onClick={this.open}>Delete</Button>
+            <Confirm open={this.state.open} onCancel={this.close} onConfirm={this.onClick}></Confirm>
           </Card.Content>
         </Card>
     );

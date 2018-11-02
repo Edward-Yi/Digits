@@ -1,7 +1,7 @@
 <img src="doc/landing.png">
 
 <h2>Installation</h2>
-<p>Download <a href="https://github.com/Edward-Yi/digits"> digits </a> and <a href="https://www.meteor.com/install">install meteor</a></p>
+<p><a href="https://github.com/Edward-Yi/digits">Download digits </a> and <a href="https://www.meteor.com/install">install meteor</a></p>
 
 <p>Open command prompt and cd into the app directory</p>
 
